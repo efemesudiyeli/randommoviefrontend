@@ -15,14 +15,14 @@ function App() {
       setClickedFirstTime(true)
       setIsLoading(true)
 
-      axios.get('http://localhost:1337/api/movies')
+      axios.get('https://strapi-demo-app-nbjg.onrender.com/api/movies')
         .then((res) => {
           const min = Math.ceil(1);
           const max = Math.floor(res.data.meta.pagination.total + 1);
           let randomMovieID = Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 
           try {
-            axios.get('http://localhost:1337/api/movies/' + randomMovieID).then((res) => {
+            axios.get('https://strapi-demo-app-nbjg.onrender.com/api/movies/' + randomMovieID).then((res) => {
               // RANDOMLY SELECTED MOVIE
               setRandomlySelectedMovie(res.data.data.attributes.title)
             }).finally(setIsLoading(false))
