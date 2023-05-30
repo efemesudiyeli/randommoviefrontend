@@ -13,7 +13,7 @@ export default function Sidebar({ getRandomMovie }) {
                 </li>
                 <li className='w-full'>
                     <ul>
-                        <li className='my-2 p-2 bg-slate-600 w-full hover:bg-slate-500 cursor-pointer'>admin panel</li>
+                        <li className='my-2 p-2 bg-slate-600 w-full hover:bg-slate-500 cursor-pointer'><a href="https://strapi-demo-app-nbjg.onrender.com/admin/content-manager/collectionType/api::movie.movie?page=1&pageSize=10&sort=title:ASC">admin panel</a></li>
                         <li className='my-2 p-2 bg-slate-600 w-full hover:bg-slate-500 cursor-pointer' onClick={getRandomMovie}> get movie</li>
                         <li className='my-2 p-2 bg-slate-600 w-full hover:bg-slate-500 cursor-pointer'>c</li>
                     </ul>
